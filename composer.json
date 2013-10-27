@@ -1,0 +1,59 @@
+{
+    "name": "llim/silexmonkey-core",
+    "description": "Core Library for Silex Monkey",
+    "require": {
+    	"php": ">5.4.0",
+	"silex/silex": "dev-master",
+	"monolog/monolog": ">=1.0.0",
+	"symfony/security": ">=2.3",
+	"symfony/routing": ">=2.3",
+	"symfony/http-kernel": ">2.3",
+	"symfony/form": ">=2.3",
+	"symfony/symfony": ">=2.3",
+	"symfony/validator": ">=2.3",
+	"symfony/config": ">=2.3",
+	"symfony/translation": ">=2.3",
+	"mustache/silex-provider": "~1.0",
+	"lusitanian/oauth": "dev-master",
+	"gigablah/silex-oauth": "dev-master",
+	"herrera-io/silex-pdo": "1.*",
+	"herrera-io/silex-wise": "*",
+	"moriony/silex-mongo-provider": "*",
+	"aws/aws-sdk-php-silex": "1.*",
+	"leongkui/silex-php-redis": "*",
+	"leongkui/silex-couchbase": "dev-master",
+	"ruflin/elastica": "0.20.5.*@dev",
+	"drak/native-session": "*"
+	},
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*",
+        "zumba/mongounit": "dev-master",
+	"mockery/mockery": "dev-master",
+	"phpunit/php-code-coverage": ">=1.2.10,<1.3.0",
+        "behat/behat": "2.4.*@stable",
+	"behat/common-contexts": "*",
+	"kriswallsmith/buzz": "*",
+        "behat/mink": "1.4.*@stable",
+        "behat/mink-extension": "*",
+        "behat/mink-goutte-driver": "*",
+        "behat/mink-selenium2-driver": "*",
+        "behat/mink-zombie-driver": "*",
+	"behat/symfony2-extension": "*"
+	},
+    "config": {
+        "bin-dir": "bin/",
+	"log-dir": "logs/",
+	"cache-dir": "cache/"
+	},
+    "autoload": {
+        "psr-0": {
+            	"SilexMonkey": "src/"
+        	}
+    	},
+    "scripts": {
+        "post-install-cmd": [
+            "utils/setupDirectories.sh"
+        ]
+    },    
+    "minimum-stability": "dev"
+}
